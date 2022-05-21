@@ -1,0 +1,500 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Avenir Next LT PRO', sans-serif;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  letter-spacing: 1px;
+  line-height: 45px;
+  margin-bottom: 10px;
+  margin: 0 110px;
+}
+
+p {
+ letter-spacing: 1px;
+ line-height: 25px;
+ margin: 0 110px;
+ 
+}
+
+a {
+  color: #000;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+video {
+  width: 100%;
+  max-width: 100%;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+
+/* navbar */
+
+nav {
+  position: fixed; 
+}
+
+
+/* grid layout for forside */
+
+.grid-1 {
+    display: grid;
+    row-gap: 100px;
+    grid-template-areas: 
+        "a-1"
+        "f-1"
+        "h-1"
+        "g-1"
+        "b-1"
+        "c-1"
+        "d-1"
+        "e-1"
+        
+    ;
+
+}
+
+/* grid-areas for grid-1 (forside) */
+
+.logo {
+  grid-area: logo;
+  width: 150px;
+  margin: 30px 30px;
+  
+}
+
+.gl-info {
+    grid-area: a-1;
+    text-align: center;
+    background: #1c3054;
+    color: #fff;
+    padding: 55px;
+}
+
+.ll-info {
+    grid-area: b-1;
+}
+
+.ll-img {
+    grid-area: c-1;
+    margin: 0 auto;
+}
+.ll-img img {
+   width: 400px;
+}
+
+.ps-info {
+    grid-area: d-1;
+}
+
+.ps-img {
+    grid-area: e-1;
+    margin: 0 auto;
+}
+.ps-img img {
+    width: 400px;
+}
+
+.info-blinde {
+  grid-area: f-1;
+}
+
+.img-stok {
+  grid-area: g-1;
+}
+
+.img-hund {
+  grid-area: h-1;
+}
+
+/*!!! indsæt quiz her !!!!*/
+
+
+/* grid layout for ledelinjer side */
+
+.grid-2 {
+
+  display: grid;
+    row-gap: 30px;
+    grid-template-areas: 
+        "a-2"
+        "b-2"
+        "c-2"
+        "d-2"
+    ;
+
+    padding-top: 150px;
+
+}
+
+/* grid-areas for grid-2 (ledelinjer side) */
+
+.ll-headline {
+  grid-area: a-2;
+  text-align: center;
+}
+
+.ll-exp-vid {
+  grid-area: b-2;
+}
+
+.ll-facts {
+  grid-area: c-2;
+}
+
+.ll-infografik {
+  grid-area: d-2;
+}
+
+
+/* grid layout punktskrift side */
+
+.grid-3 {
+  display: grid;
+    row-gap: 30px;
+    grid-template-areas: 
+        "a-3"
+        "b-3"
+        "c-3"
+        "d-3"
+    ;
+
+    padding-top: 150px;
+}
+
+/* grid-areas for grid-3 (punktskrift side) */
+
+.ps-headline {
+  grid-area: a-3;
+  text-align: center;
+}
+
+.ps-exp-vid {
+  grid-area: b-3;
+  
+}
+
+.ps-facts {
+  grid-area: c-3;
+  
+}
+
+.ps-infografik {
+  grid-area: d-3;
+  
+}
+
+/* tablet */
+
+@media (min-width: 768px) {
+
+  h1 {
+    letter-spacing: 1px;
+    line-height: 45px;
+    margin-bottom: 10px;
+    margin: 0;
+  }
+  
+  p {
+   letter-spacing: 1px;
+   line-height: 25px;
+   margin: 0;
+   
+  }
+
+      /* grid layout for forside */
+    .grid-1 {
+        column-gap: 50px;
+        row-gap: 100px;
+        grid-template-columns: 1fr 2fr 2fr 1fr;
+        grid-template-areas:
+            "a-1 a-1 a-1 a-1"
+            "f-1 f-1 h-1 h-1"
+            "g-1 g-1 g-1 g-1"
+            "b-1 b-1 c-1 c-1"
+            "e-1 e-1 d-1 d-1"   
+        ;
+
+        
+    }
+
+  /* grid-areas for grid-1 (forside) */
+
+  .logo {
+    grid-area: logo;
+  }
+
+  .gl-info {
+      grid-area: a-1;
+  }
+  
+  .ll-info {
+      grid-area: b-1;
+      grid-column: 2/3;
+      width: 450px;
+  }
+  
+  .ll-img {
+      grid-area: c-1;
+      grid-column: 3/4;
+  }
+  
+  .ps-info {
+      grid-area: d-1;
+      width: 450px;
+  }
+  
+  .ps-img {
+      grid-area: e-1;
+  }
+ 
+  .info-blinde {
+     grid-area: f-1;
+     grid-column: 2/3;
+  }
+
+  .img-stok {
+     grid-area: g-1;
+  }
+
+  .img-hund {
+    grid-area: h-1;
+    grid-column: 3/4;
+  }
+
+    /* grid layout for ledelinjer side */
+
+    .grid-2 {
+      column-gap: 50px;
+      row-gap: 150px;
+      grid-template-columns: 1fr 2fr 2fr 1fr;
+      grid-template-areas: 
+        "a-2 a-2 a-2 a-2"
+        "b-2 b-2 b-2 b-2"
+        "c-2 c-2 d-2 d-2"
+      ;
+
+      padding: 100px 40px;
+    }
+
+  
+  /* grid-areas for grid-2 (ledelinjer side) */
+
+.ll-headline {
+  grid-area: a-2;
+  text-align: center;
+}
+
+.ll-exp-vid {
+  grid-area: b-2;
+  grid-column: 2/4;
+}
+
+.ll-facts {
+  grid-area: c-2;
+  grid-column: 2/3;
+}
+
+.ll-infografik {
+  grid-area: d-2;
+  grid-column: 3/4;
+}
+
+
+    /* grid layout for blindeskrift side */
+
+    .grid-3 {
+      column-gap: 50px;
+      row-gap: 150px;
+      grid-template-columns: 1fr 2fr 2fr 1fr;
+      grid-template-areas: 
+        "a-3 a-3 a-3 a-3"
+        "c-3 c-3 b-3 b-3"
+      ;
+
+      padding: 100px 40px;
+    }
+
+    /* grid-areas for grid-3 (blindeskrift side) */
+
+    .ps-headline {
+      grid-area: a-3;
+      text-align: center;
+    }
+    
+    .ps-facts {
+      grid-area: b-3;
+      grid-column: 3/4;
+    }
+    
+    .ps-infografik {
+      grid-area: c-3;
+      grid-column: 2/3;
+    }
+    
+  
+}
+
+  /* laptop */
+@media (min-width: 1280px) {
+
+  h1 {
+    letter-spacing: 1px;
+    line-height: 45px;
+    margin-bottom: 10px;
+    margin: 0;
+  }
+  
+  p {
+   letter-spacing: 1px;
+   line-height: 25px;
+   margin: 0;
+   
+  }
+
+    
+    /* grid layout for forside */
+  .grid-1 {
+      column-gap: 30px;
+      row-gap: 200px;
+      grid-template-areas:
+          "a-1 a-1 a-1 a-1"
+          "f-1 f-1 h-1 h-1"
+          "g-1 g-1 g-1 g-1"
+          "b-1 b-1 c-1 c-1"
+          "e-1 e-1 d-1 d-1"  
+      ;
+
+      
+  }
+
+  /* grid-areas for grid-1 (forside) */
+.logo {
+    grid-area: logo;
+}
+
+.gl-info {
+    grid-area: a-1;
+    grid-column: 1/5;
+    padding: 200px 400px;
+}
+
+.ll-info {
+    grid-area: b-1;
+    grid-column: 2/3;
+}
+
+.ll-img {
+    grid-area: c-1;
+    grid-column: 3/4;
+}
+
+.ps-info {
+    grid-area: d-1;
+    grid-column: 3/4;
+}
+
+.ps-img {
+    grid-area: e-1;
+    grid-column: 2/3;
+}
+
+.info-blinde {
+  grid-area: f-1;
+  grid-column: 2/3;
+}
+
+.img-stok {
+  grid-area: g-1;
+  grid-column: 2/4;
+  
+}
+
+.img-hund {
+  grid-area: h-1;
+  grid-column: 3/4;
+  
+}
+
+  /* grid layout for ledelinjer side */
+
+  .grid-2 {
+    column-gap: 50px;
+    row-gap: 150px;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-areas:
+      "a-2 a-2 a-2 a-2"
+      "b-2 b-2 b-2 b-2"
+      "c-2 c-2 d-2 d-2"
+    ;
+
+  }
+
+
+/* grid-areas for grid-2 (ledelinjer side) */
+
+.ll-headline {
+grid-area: a-2;
+text-align: center;
+}
+
+.ll-exp-vid {
+grid-area: b-2;
+grid-column: 2/4;
+}
+
+.ll-facts {
+grid-area: c-2;
+grid-column: 2/3;
+}
+
+.ll-infografik {
+grid-area: d-2;
+grid-column: 3/4;
+}
+
+
+  /* grid layout for blindeskrift side */
+
+  .grid-3 {
+    column-gap: 50px;
+    row-gap: 150px;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-areas: 
+      "a-3 a-3 a-3 a-3"
+      "c-3 c-3 b-3 b-3"
+    ;
+
+    padding: 100px 40px;
+  }
+
+  /* grid-areas for grid-3 (blindeskrift side) */
+
+  .ps-headline {
+    grid-area: a-3;
+    text-align: center;
+  }
+  
+  .ps-facts {
+    grid-area: b-3;
+    grid-column: 3/4;
+  }
+  
+  .ps-infografik {
+    grid-area: c-3;
+    grid-column: 2/3;
+  }
+}
